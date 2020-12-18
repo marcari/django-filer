@@ -162,9 +162,11 @@ djQuery(function ($) {
                 dropzones.each(createDropzone);
             });
         } else {
-            $('.add-row a').on('click', function () {
-                var dropzones = $(dropzoneSelector);
-                dropzones.each(createDropzone);
+            $('a.grp-add-handler').on('click', function () {
+                setTimeout(function(){
+                    var dropzones = $(dropzoneSelector);
+                    dropzones.each(createDropzone);
+                }, 1000);
             });
         }
     }
